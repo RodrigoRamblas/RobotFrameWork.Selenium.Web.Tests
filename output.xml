@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-02-20T03:57:12.440388" rpa="false" schemaversion="5">
+<suite id="s1" name="SingInTests" source="c:\Users\rodri\Documents\RobotFrameWork.Selenium.Web.Tests\Tests\SingInTests.robot">
+<test id="s1-t1" name="CT02:Preencher e-mail e criar a conta" line="19">
+<kw name="Set Test Environment" owner="Config" type="SETUP">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Get Variable Value" owner="BuiltIn">
+<arg>${BASE_URL_PROD}</arg>
+<doc>Returns variable value or ``default`` if the variable does not exist.</doc>
+<status status="PASS" start="2024-02-20T03:57:12.914960" elapsed="0.000000"/>
+</kw>
+<msg time="2024-02-20T03:57:12.916030" level="INFO">${base_url} = http://www.automationpractice.pl</msg>
+<var>${base_url}</var>
+<arg>'${environment}' == 'prod'</arg>
+<arg>Get Variable Value</arg>
+<arg>${BASE_URL_PROD}</arg>
+<arg>ELSE IF</arg>
+<arg>'${environment}' == 'qa'</arg>
+<arg>Get Variable Value</arg>
+<arg>${BASE_URL_QA}</arg>
+<arg>ELSE</arg>
+<arg>Get Variable Value</arg>
+<arg>${BASE_URL_DEV}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-02-20T03:57:12.914960" elapsed="0.001993"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-20T03:57:12.917950" level="INFO">Opening browser 'chrome' to base url 'http://www.automationpractice.pl'.</msg>
+<arg>${base_url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-20T03:57:12.917950" elapsed="7.037488"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-20T03:57:19.955438" elapsed="0.127204"/>
+</kw>
+<arg>chrome</arg>
+<arg>prod</arg>
+<status status="PASS" start="2024-02-20T03:57:12.913948" elapsed="7.170939"/>
+</kw>
+<kw name="Generate Random Email" owner="FakerHelper">
+<kw name="Email" owner="FakerLibrary">
+<msg time="2024-02-20T03:57:20.089874" level="INFO">${email} = leonardofogaca@example.com</msg>
+<var>${email}</var>
+<status status="PASS" start="2024-02-20T03:57:20.088877" elapsed="0.002991"/>
+</kw>
+<return>
+<value>${email}</value>
+<status status="PASS" start="2024-02-20T03:57:20.091868" elapsed="0.000996"/>
+</return>
+<msg time="2024-02-20T03:57:20.092864" level="INFO">${Email} = leonardofogaca@example.com</msg>
+<var>${Email}</var>
+<doc>Gera um endereço de e-mail aleatório</doc>
+<status status="PASS" start="2024-02-20T03:57:20.086928" elapsed="0.005936"/>
+</kw>
+<kw name="Quando clico no botão Sign in" owner="HomeStep">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-20T03:57:20.094855" level="INFO">Clicking element '//div[@id='contact-link']/preceding-sibling::div[@class='header_user_info']/a[@class='login']'.</msg>
+<arg>${SING_IN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-20T03:57:20.093859" elapsed="1.204248"/>
+</kw>
+<status status="PASS" start="2024-02-20T03:57:20.093859" elapsed="1.205322"/>
+</kw>
+<kw name="E preencho o campo create e-mail address" owner="SingInStep">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-20T03:57:21.301187" level="INFO">Typing text 'leonardofogaca@example.com' into text field 'email_create'.</msg>
+<arg>${CREATE_EMAIL_ADDRESS_FIELD}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-20T03:57:21.300188" elapsed="0.132870"/>
+</kw>
+<arg>${Email}</arg>
+<status status="PASS" start="2024-02-20T03:57:21.300188" elapsed="0.132870"/>
+</kw>
+<kw name="E clico em Create an account" owner="SingInStep">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-20T03:57:21.435204" level="INFO">Clicking element 'SubmitCreate'.</msg>
+<arg>${CREATE_AN_ACCOUNT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-20T03:57:21.434122" elapsed="0.142405"/>
+</kw>
+<status status="PASS" start="2024-02-20T03:57:21.434122" elapsed="0.142405"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-02-20T03:57:21.576527" elapsed="6.226729"/>
+</kw>
+<doc>Automação Verificar o Sing in</doc>
+<tag>CT02</tag>
+<status status="PASS" start="2024-02-20T03:57:12.912749" elapsed="14.891523"/>
+</test>
+<status status="PASS" start="2024-02-20T03:57:12.444364" elapsed="15.362893"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">CT02</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="SingInTests">SingInTests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
