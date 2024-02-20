@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-02-20T03:57:12.440388" rpa="false" schemaversion="5">
-<suite id="s1" name="SingInTests" source="c:\Users\rodri\Documents\RobotFrameWork.Selenium.Web.Tests\Tests\SingInTests.robot">
-<test id="s1-t1" name="CT02:Preencher e-mail e criar a conta" line="19">
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-02-20T11:32:58.380239" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\rodri\Documents\RobotFrameWork.Selenium.Web.Tests\Tests">
+<suite id="s1-s1" name="SingInTests" source="C:\Users\rodri\Documents\RobotFrameWork.Selenium.Web.Tests\Tests\SingInTests.robot">
+<test id="s1-s1-t1" name="CT01:Validar o click Sing in" line="15">
 <kw name="Set Test Environment" owner="Config" type="SETUP">
 <kw name="Run Keyword If" owner="BuiltIn">
 <kw name="Get Variable Value" owner="BuiltIn">
 <arg>${BASE_URL_PROD}</arg>
 <doc>Returns variable value or ``default`` if the variable does not exist.</doc>
-<status status="PASS" start="2024-02-20T03:57:12.914960" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-20T11:32:58.973215" elapsed="0.000000"/>
 </kw>
-<msg time="2024-02-20T03:57:12.916030" level="INFO">${base_url} = http://www.automationpractice.pl</msg>
+<msg time="2024-02-20T11:32:58.973215" level="INFO">${base_url} = http://www.automationpractice.pl</msg>
 <var>${base_url}</var>
 <arg>'${environment}' == 'prod'</arg>
 <arg>Get Variable Value</arg>
@@ -22,86 +23,379 @@
 <arg>Get Variable Value</arg>
 <arg>${BASE_URL_DEV}</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-02-20T03:57:12.914960" elapsed="0.001993"/>
+<status status="PASS" start="2024-02-20T11:32:58.973215" elapsed="0.000000"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-02-20T03:57:12.917950" level="INFO">Opening browser 'chrome' to base url 'http://www.automationpractice.pl'.</msg>
+<msg time="2024-02-20T11:32:58.973215" level="INFO">Opening browser 'chrome' to base url 'http://www.automationpractice.pl'.</msg>
 <arg>${base_url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-02-20T03:57:12.917950" elapsed="7.037488"/>
+<status status="PASS" start="2024-02-20T11:32:58.973215" elapsed="7.365237"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-02-20T03:57:19.955438" elapsed="0.127204"/>
+<status status="PASS" start="2024-02-20T11:33:06.338452" elapsed="0.129995"/>
 </kw>
 <arg>chrome</arg>
 <arg>prod</arg>
-<status status="PASS" start="2024-02-20T03:57:12.913948" elapsed="7.170939"/>
-</kw>
-<kw name="Generate Random Email" owner="FakerHelper">
-<kw name="Email" owner="FakerLibrary">
-<msg time="2024-02-20T03:57:20.089874" level="INFO">${email} = leonardofogaca@example.com</msg>
-<var>${email}</var>
-<status status="PASS" start="2024-02-20T03:57:20.088877" elapsed="0.002991"/>
-</kw>
-<return>
-<value>${email}</value>
-<status status="PASS" start="2024-02-20T03:57:20.091868" elapsed="0.000996"/>
-</return>
-<msg time="2024-02-20T03:57:20.092864" level="INFO">${Email} = leonardofogaca@example.com</msg>
-<var>${Email}</var>
-<doc>Gera um endereço de e-mail aleatório</doc>
-<status status="PASS" start="2024-02-20T03:57:20.086928" elapsed="0.005936"/>
+<status status="PASS" start="2024-02-20T11:32:58.972215" elapsed="7.496232"/>
 </kw>
 <kw name="Quando clico no botão Sign in" owner="HomeStep">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-20T03:57:20.094855" level="INFO">Clicking element '//div[@id='contact-link']/preceding-sibling::div[@class='header_user_info']/a[@class='login']'.</msg>
+<msg time="2024-02-20T11:33:06.469454" level="INFO">Clicking element '//div[@id='contact-link']/preceding-sibling::div[@class='header_user_info']/a[@class='login']'.</msg>
 <arg>${SING_IN_BUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-20T03:57:20.093859" elapsed="1.204248"/>
+<status status="PASS" start="2024-02-20T11:33:06.469454" elapsed="1.276573"/>
 </kw>
-<status status="PASS" start="2024-02-20T03:57:20.093859" elapsed="1.205322"/>
-</kw>
-<kw name="E preencho o campo create e-mail address" owner="SingInStep">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-20T03:57:21.301187" level="INFO">Typing text 'leonardofogaca@example.com' into text field 'email_create'.</msg>
-<arg>${CREATE_EMAIL_ADDRESS_FIELD}</arg>
-<arg>${email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-20T03:57:21.300188" elapsed="0.132870"/>
-</kw>
-<arg>${Email}</arg>
-<status status="PASS" start="2024-02-20T03:57:21.300188" elapsed="0.132870"/>
-</kw>
-<kw name="E clico em Create an account" owner="SingInStep">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-20T03:57:21.435204" level="INFO">Clicking element 'SubmitCreate'.</msg>
-<arg>${CREATE_AN_ACCOUNT_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-20T03:57:21.434122" elapsed="0.142405"/>
-</kw>
-<status status="PASS" start="2024-02-20T03:57:21.434122" elapsed="0.142405"/>
+<status status="PASS" start="2024-02-20T11:33:06.468447" elapsed="1.277580"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-02-20T03:57:21.576527" elapsed="6.226729"/>
+<status status="PASS" start="2024-02-20T11:33:07.747028" elapsed="6.256072"/>
+</kw>
+<doc>Automação Verificar o Sing in</doc>
+<tag>CT01</tag>
+<status status="PASS" start="2024-02-20T11:32:58.971627" elapsed="15.032451"/>
+</test>
+<test id="s1-s1-t2" name="CT02:Preencher e-mail e criar a conta" line="20">
+<kw name="Set Test Environment" owner="Config" type="SETUP">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Get Variable Value" owner="BuiltIn">
+<arg>${BASE_URL_PROD}</arg>
+<doc>Returns variable value or ``default`` if the variable does not exist.</doc>
+<status status="PASS" start="2024-02-20T11:33:14.009975" elapsed="0.000000"/>
+</kw>
+<msg time="2024-02-20T11:33:14.009975" level="INFO">${base_url} = http://www.automationpractice.pl</msg>
+<var>${base_url}</var>
+<arg>'${environment}' == 'prod'</arg>
+<arg>Get Variable Value</arg>
+<arg>${BASE_URL_PROD}</arg>
+<arg>ELSE IF</arg>
+<arg>'${environment}' == 'qa'</arg>
+<arg>Get Variable Value</arg>
+<arg>${BASE_URL_QA}</arg>
+<arg>ELSE</arg>
+<arg>Get Variable Value</arg>
+<arg>${BASE_URL_DEV}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-02-20T11:33:14.008980" elapsed="0.000995"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-20T11:33:14.010972" level="INFO">Opening browser 'chrome' to base url 'http://www.automationpractice.pl'.</msg>
+<arg>${base_url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-20T11:33:14.010972" elapsed="6.470842"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-20T11:33:20.481814" elapsed="0.114222"/>
+</kw>
+<arg>chrome</arg>
+<arg>prod</arg>
+<status status="PASS" start="2024-02-20T11:33:14.008980" elapsed="6.587056"/>
+</kw>
+<kw name="Generate Random Email" owner="FakerHelper">
+<kw name="Email" owner="FakerLibrary">
+<msg time="2024-02-20T11:33:20.597032" level="INFO">${email} = costajulia@example.com</msg>
+<var>${email}</var>
+<status status="PASS" start="2024-02-20T11:33:20.597032" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${email}</value>
+<status status="PASS" start="2024-02-20T11:33:20.597032" elapsed="0.001068"/>
+</return>
+<msg time="2024-02-20T11:33:20.598100" level="INFO">${Email} = costajulia@example.com</msg>
+<var>${Email}</var>
+<doc>Gera um endereço de e-mail aleatório</doc>
+<status status="PASS" start="2024-02-20T11:33:20.597032" elapsed="0.001068"/>
+</kw>
+<kw name="Generate Random Name" owner="FakerHelper">
+<kw name="Name" owner="FakerLibrary">
+<msg time="2024-02-20T11:33:20.599197" level="INFO">${name} = Larissa Fogaça</msg>
+<var>${name}</var>
+<doc>:example: 'John Doe'</doc>
+<status status="PASS" start="2024-02-20T11:33:20.598100" elapsed="0.001097"/>
+</kw>
+<return>
+<value>${name}</value>
+<status status="PASS" start="2024-02-20T11:33:20.599197" elapsed="0.000000"/>
+</return>
+<msg time="2024-02-20T11:33:20.599197" level="INFO">${First_Name} = Larissa Fogaça</msg>
+<var>${First_Name}</var>
+<doc>Gera um nome aleatório</doc>
+<status status="PASS" start="2024-02-20T11:33:20.598100" elapsed="0.001097"/>
+</kw>
+<kw name="Generate Random Last Name" owner="FakerHelper">
+<kw name="Last Name" owner="FakerLibrary">
+<msg time="2024-02-20T11:33:20.600215" level="INFO">${last_name} = da Mata</msg>
+<var>${last_name}</var>
+<status status="PASS" start="2024-02-20T11:33:20.600215" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${last_name}</value>
+<status status="PASS" start="2024-02-20T11:33:20.600215" elapsed="0.000000"/>
+</return>
+<msg time="2024-02-20T11:33:20.601232" level="INFO">${Last_Name} = da Mata</msg>
+<var>${Last_Name}</var>
+<doc>Gera um sobrenome aleatório</doc>
+<status status="PASS" start="2024-02-20T11:33:20.599197" elapsed="0.002035"/>
+</kw>
+<kw name="Generate Random Password" owner="FakerHelper">
+<kw name="Password" owner="FakerLibrary">
+<msg time="2024-02-20T11:33:20.602257" level="INFO">${password} = t&amp;2##OhaVv</msg>
+<var>${password}</var>
+<doc>Generate a random password of the specified ``length``.</doc>
+<status status="PASS" start="2024-02-20T11:33:20.602257" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${password}</value>
+<status status="PASS" start="2024-02-20T11:33:20.602257" elapsed="0.000000"/>
+</return>
+<msg time="2024-02-20T11:33:20.602257" level="INFO">${Password} = t&amp;2##OhaVv</msg>
+<var>${Password}</var>
+<doc>Gera uma senha aleatória</doc>
+<status status="PASS" start="2024-02-20T11:33:20.601232" elapsed="0.001025"/>
+</kw>
+<kw name="Generate Random Data" owner="FakerHelper">
+<kw name="Date" owner="FakerLibrary">
+<msg time="2024-02-20T11:33:20.604320" level="INFO">${date} = 1971-07-07</msg>
+<var>${date}</var>
+<doc>Get a date string between January 1, 1970 and now.</doc>
+<status status="PASS" start="2024-02-20T11:33:20.603296" elapsed="0.001024"/>
+</kw>
+<return>
+<value>${date}</value>
+<status status="PASS" start="2024-02-20T11:33:20.604320" elapsed="0.000000"/>
+</return>
+<msg time="2024-02-20T11:33:20.604320" level="INFO">${Data} = 1971-07-07</msg>
+<var>${Data}</var>
+<doc>Gera uma data aleatória</doc>
+<status status="PASS" start="2024-02-20T11:33:20.603296" elapsed="0.001024"/>
+</kw>
+<kw name="Quando clico no botão Sign in" owner="HomeStep">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-20T11:33:20.606380" level="INFO">Clicking element '//div[@id='contact-link']/preceding-sibling::div[@class='header_user_info']/a[@class='login']'.</msg>
+<arg>${SING_IN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-20T11:33:20.605341" elapsed="1.007797"/>
+</kw>
+<status status="PASS" start="2024-02-20T11:33:20.604320" elapsed="1.009816"/>
+</kw>
+<kw name="E preencho o campo create e-mail address" owner="SingInStep">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-20T11:33:21.615143" level="INFO">Typing text 'costajulia@example.com' into text field 'email_create'.</msg>
+<arg>${CREATE_EMAIL_ADDRESS_FIELD}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-20T11:33:21.615143" elapsed="0.113305"/>
+</kw>
+<arg>${Email}</arg>
+<status status="PASS" start="2024-02-20T11:33:21.614136" elapsed="0.114312"/>
+</kw>
+<kw name="E clico em Create an account" owner="SingInStep">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-20T11:33:21.729467" level="INFO">Clicking element 'SubmitCreate'.</msg>
+<arg>${CREATE_AN_ACCOUNT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-20T11:33:21.729467" elapsed="0.068449"/>
+</kw>
+<status status="PASS" start="2024-02-20T11:33:21.728448" elapsed="0.069468"/>
+</kw>
+<kw name="Então devo informar os meus dados para criar a conta" owner="CreateAnAccountStep">
+<kw name="Então devo informar os meus dados create account" owner="Data">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${TITLE_MR_RADIO_BUTTON}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-02-20T11:33:21.798979" elapsed="1.074581"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-20T11:33:22.873560" level="INFO">Clicking element '//input[@id='id_gender1']'.</msg>
+<arg>${TITLE_MR_RADIO_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-20T11:33:22.873560" elapsed="0.044780"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-20T11:33:22.918340" level="INFO">Typing text 'Larissa Fogaça' into text field 'customer_firstname'.</msg>
+<arg>${FIRST_NAME_FIELD}</arg>
+<arg>${first_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-20T11:33:22.918340" elapsed="0.103231"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-20T11:33:23.021571" level="INFO">Typing text 'da Mata' into text field 'customer_lastname'.</msg>
+<arg>${LAST_NAME_FIELD}</arg>
+<arg>${last_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-20T11:33:23.021571" elapsed="0.089976"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-20T11:33:23.111547" level="INFO">Typing text 'costajulia@example.com' into text field 'email'.</msg>
+<arg>${EMAIL_FIELD}</arg>
+<arg>${e-mail}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-20T11:33:23.111547" elapsed="0.094162"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-20T11:33:23.205709" level="INFO">Typing text 't&amp;2##OhaVv' into text field 'passwd'.</msg>
+<arg>${PASS_WORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-20T11:33:23.205709" elapsed="0.168481"/>
+</kw>
+<kw name="Preencher Data de Nascimento" owner="Data">
+<kw name="Split String" owner="String">
+<msg time="2024-02-20T11:33:23.376718" level="INFO">${year} = 1971</msg>
+<msg time="2024-02-20T11:33:23.376718" level="INFO">${month} = 07</msg>
+<msg time="2024-02-20T11:33:23.376718" level="INFO">${day} = 07</msg>
+<var>${year}</var>
+<var>${month}</var>
+<var>${day}</var>
+<arg>${data}</arg>
+<arg>-</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-02-20T11:33:23.376718" elapsed="0.000000"/>
+</kw>
+<kw name="Remover Zero à Esquerda" owner="Data">
+<kw name="Convert To Integer" owner="BuiltIn">
+<msg time="2024-02-20T11:33:23.377742" level="INFO">${value} = 7</msg>
+<var>${value}</var>
+<arg>${value}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="PASS" start="2024-02-20T11:33:23.376718" elapsed="0.001024"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-02-20T11:33:23.377742" level="INFO">${value} = 7</msg>
+<var>${value}</var>
+<arg>${value}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-02-20T11:33:23.377742" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${value}</value>
+<status status="PASS" start="2024-02-20T11:33:23.377742" elapsed="0.000000"/>
+</return>
+<msg time="2024-02-20T11:33:23.377742" level="INFO">${day} = 7</msg>
+<var>${day}</var>
+<arg>${day}</arg>
+<status status="PASS" start="2024-02-20T11:33:23.376718" elapsed="0.001024"/>
+</kw>
+<kw name="Remover Zero à Esquerda" owner="Data">
+<kw name="Convert To Integer" owner="BuiltIn">
+<msg time="2024-02-20T11:33:23.378744" level="INFO">${value} = 7</msg>
+<var>${value}</var>
+<arg>${value}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="PASS" start="2024-02-20T11:33:23.377742" elapsed="0.001002"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-02-20T11:33:23.378744" level="INFO">${value} = 7</msg>
+<var>${value}</var>
+<arg>${value}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-02-20T11:33:23.378744" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${value}</value>
+<status status="PASS" start="2024-02-20T11:33:23.378744" elapsed="0.000000"/>
+</return>
+<msg time="2024-02-20T11:33:23.378744" level="INFO">${month} = 7</msg>
+<var>${month}</var>
+<arg>${month}</arg>
+<status status="PASS" start="2024-02-20T11:33:23.377742" elapsed="0.001002"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${DAY_SELECT}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-02-20T11:33:23.378744" elapsed="0.017785"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-02-20T11:33:23.400247" level="INFO">Selecting options from selection list 'days' by value 7.</msg>
+<arg>${DAY_SELECT}</arg>
+<arg>${day}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-02-20T11:33:23.399242" elapsed="0.164830"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${MONTHS_SELECT}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-02-20T11:33:23.564072" elapsed="0.030019"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-02-20T11:33:23.597940" level="INFO">Selecting options from selection list 'months' by value 7.</msg>
+<arg>${MONTHS_SELECT}</arg>
+<arg>${month}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-02-20T11:33:23.596944" elapsed="0.089850"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${YEARS_SELECT}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-02-20T11:33:23.686794" elapsed="0.011811"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-02-20T11:33:23.699632" level="INFO">Selecting options from selection list 'years' by value 1971.</msg>
+<arg>${YEARS_SELECT}</arg>
+<arg>${year}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-02-20T11:33:23.698605" elapsed="0.045055"/>
+</kw>
+<arg>${data}</arg>
+<status status="PASS" start="2024-02-20T11:33:23.375453" elapsed="0.368207"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-20T11:33:23.744656" level="INFO">Clicking element 'newsletter'.</msg>
+<arg>${SING_UP_FOR_OUR_NEWSLETTER_CHECK_BOX}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-20T11:33:23.744656" elapsed="0.036511"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-20T11:33:23.782211" level="INFO">Clicking element 'submitAccount'.</msg>
+<arg>${REGISTER_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-20T11:33:23.781167" elapsed="1.196731"/>
+</kw>
+<arg>${first_name}</arg>
+<arg>${last_name}</arg>
+<arg>${e-mail}</arg>
+<arg>${password}</arg>
+<arg>${data}</arg>
+<status status="PASS" start="2024-02-20T11:33:21.798979" elapsed="3.178919"/>
+</kw>
+<arg>${First_Name}</arg>
+<arg>${Last_Name}</arg>
+<arg>${Email}</arg>
+<arg>${Password}</arg>
+<arg>${Data}</arg>
+<status status="PASS" start="2024-02-20T11:33:21.797916" elapsed="3.179982"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-02-20T11:33:24.978902" elapsed="6.280657"/>
 </kw>
 <doc>Automação Verificar o Sing in</doc>
 <tag>CT02</tag>
-<status status="PASS" start="2024-02-20T03:57:12.912749" elapsed="14.891523"/>
+<status status="PASS" start="2024-02-20T11:33:14.006991" elapsed="17.252568"/>
 </test>
-<status status="PASS" start="2024-02-20T03:57:12.444364" elapsed="15.362893"/>
+<status status="PASS" start="2024-02-20T11:32:58.400737" elapsed="32.859818"/>
+</suite>
+<status status="PASS" start="2024-02-20T11:32:58.381695" elapsed="32.890227"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">CT01</stat>
 <stat pass="1" fail="0" skip="0">CT02</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="SingInTests">SingInTests</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="SingInTests">Tests.SingInTests</stat>
 </suite>
 </statistics>
 <errors>
