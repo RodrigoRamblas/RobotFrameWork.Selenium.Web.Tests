@@ -31,6 +31,16 @@ CT02:Preencher e-mail e criar a conta
     E clico em Create an account
     Então devo informar os meus dados para criar a conta    ${First_Name}    ${Last_Name}   ${Email}    ${Password}    ${Data}
 
+CT03:Validar a mensagem Invalid email address
+    [Documentation]     Automação Verificar o Sing in
+    [Tags]              CT03
+    ${Email_Inválido}       Generate Random Last Name
+    Quando clico no botão Sign in
+    E preencho um e-mail inválido      ${Email_Inválido}
+    E clico em Create an account
+    Então verifico a mensagem Invalid email address
+
+
 
 
    
