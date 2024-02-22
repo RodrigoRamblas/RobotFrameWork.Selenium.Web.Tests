@@ -2,6 +2,7 @@
 Library           SeleniumLibrary
 Library           String
 Resource          ../Pages/CreateAnAccountPage/CreateAnAccountPage.robot
+Resource          ../Pages/HomePage/HomePage.robot
 
 *** Keywords ***
 Preencher Data de Nascimento
@@ -28,9 +29,26 @@ Então devo informar os meus dados create account
     Click Element                       ${SING_UP_FOR_OUR_NEWSLETTER_CHECK_BOX}
     Click Element                       ${REGISTER_BUTTON}
 
-*** Keywords ***
+Preencher os dados para compra
+    [Arguments]    ${company}    ${address}    ${address_line_2}    ${city}     ${state}    ${zip_postal_code}    ${country}    ${home_phone}    ${mobile_phone}    ${additional_information}    ${please_assign_an_addrress_title_for_future_reference}
+    Wait Until Page Contains Element    ${COMPANY_FIELD}                                                        timeout=10s
+    Input Text                          ${COMPANY_FIELD}                                                        ${company}
+    Input Text                          ${ADDRESS_FIELD}                                                        ${address}
+    Input Text                          ${ADDRESS_LINE_2_FIELD}                                                 ${address_line_2}
+    Input Text                          ${CITY_FIELD}                                                           ${city}
+    Select From List by Value           ${STATE_FIELD}                                                          2
+    Input Text                          ${ZIP_POSTAL_CODE_FIELD}                                                ${zip_postal_code}
+    #Input Text                          ${COUNTRY_FIELD}                                                        ${country}
+    Input Text                          ${HOME_PHONE_FIELD}                                                     ${home_phone}
+    Input Text                          ${MOBILE_PHONE_FIELD}                                                   ${mobile_phone}
+    Input Text                          ${ADDITIONAL_INFORMATION_FIELD}                                         ${additional_information}
+    Input Text                          ${PLEASE_ASSING_AN_ADDRESS_TITLE_FOR_FUTURE_REFERENCE_FIELD}            ${please_assign_an_addrress_title_for_future_reference}
+
 Remover Zero à Esquerda
     [Arguments]    ${value}
     ${value}=    Convert To Integer    ${value}
     ${value}=    Convert To String     ${value}
     RETURN    ${value}
+
+
+

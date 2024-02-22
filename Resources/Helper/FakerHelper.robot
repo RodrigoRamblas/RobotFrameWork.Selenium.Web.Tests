@@ -61,3 +61,23 @@ Generate Random Data
     [Documentation]    Gera uma data aleatória
     ${date}=    FakerLibrary.Date
     RETURN   ${date}
+
+Generate Random Company
+    [Documentation]    Gera uma empresa aleatória
+    ${company}=    FakerLibrary.Company
+    RETURN   ${company}
+
+Generate Random Adddress
+    [Documentation]    Gera um endereço aleatório
+    ${adddress}=    FakerLibrary.Address
+    RETURN   ${adddress}
+
+Generate Random Postcode
+    [Documentation]    Gera um CEP aleatório
+    ${postal_code}=    FakerLibrary.Postcode
+    RETURN   ${postal_code}
+
+Generate Random Text
+    [Documentation]    Gera um texto aleatório
+    ${text}=    FakerLibrary.Text
+    RETURN   ${text}
