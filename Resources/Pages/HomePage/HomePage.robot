@@ -15,8 +15,8 @@ ${VIEW}                                                              //div[@clas
 ${CONTINUE_SHOPPING}                                                 //div[@class="layer_cart_cart col-xs-12 col-md-6"]//span[@title="Continue shopping"]
 ${PROCEED_TO_CHECKOUT}                                               //div[@class="layer_cart_cart col-xs-12 col-md-6"]//a[@title="Proceed to checkout"]
 ${PROCEED_TO_CHECKOUT_END}                                           //a[@class="button btn btn-default standard-checkout button-medium" and @title="Proceed to checkout"]
-${PROCEED_TO_CHECKOUT_ADDRESS}                                       //*[@id="center_column"]/form/p/button/span/text()
-${PROCEED_TO_CHECKOUT_SHIPPING}                                      //*[@id="form"]/p/button/span/text()[1]
+${PROCEED_TO_CHECKOUT_ADDRESS}                                       //*[@id="center_column"]/form/p/button/span
+${PROCEED_TO_CHECKOUT_SHIPPING}                                      //*[@id="form"]/p/button/span
 ${COMPANY_FIELD}                                                           company
 ${ADDRESS_FIELD}                                                           address1
 ${ADDRESS_LINE_2_FIELD}                                                    address2
@@ -29,8 +29,8 @@ ${MOBILE_PHONE_FIELD}                                                      phone
 ${ADDITIONAL_INFORMATION_FIELD}                                            other
 ${PLEASE_ASSING_AN_ADDRESS_TITLE_FOR_FUTURE_REFERENCE_FIELD}               alias
 ${SAVE}                                                                    submitAddress
-${I_AGREE_TO_THE_TERMS_OF_SERVICE_AND_WILL_ADHERE_TO_THEM_UNCONDITIONALLY}        cgv
-${PAY_BY_BANK_WIRE}                                                              //*[@id="HOOK_PAYMENT"]/div[1]/div/p/av
+${I_AGREE_TO_THE_TERMS_OF_SERVICE_AND_WILL_ADHERE_TO_THEM_UNCONDITIONALLY}        //*[@id="uniform-cgv"]/span
+${PAY_BY_BANK_WIRE}                                                              //*[@id="HOOK_PAYMENT"]/div[1]/div/p/a
 ${PAY_BY_CHECK}                                                                  //*[@id="HOOK_PAYMENT"]/div[2]/div/p/a
 ${I_CONFIRM_MY_ORDER}                                                            //*[@id="cart_navigation"]/button/span
 ${YOUR_ORDER_ON_MY_SHOP_IS_COMPLETE}                                             Your order on My Shop is complete.
