@@ -19,11 +19,15 @@ git clone https://github.com/RodrigoRamblas/RobotFrameWork.Selenium.Web.Tests.gi
 
 ## Estruturas de pastas e readme
     RobotFrameWork.Selenium.Web.Tests
+    ├── Config
+    |
     ├── Resources
+    │   ├── Data
+    │   ├── Helper
     │   ├── Steps
-    │   │   
     │   └── Pages
     │       
+    ├── results
     ├── Tests
     │   
     └── README.md
