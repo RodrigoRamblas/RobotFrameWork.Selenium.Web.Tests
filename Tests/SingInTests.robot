@@ -7,7 +7,7 @@ Test Teardown     Close All Browsers
 Resource          ../Config/Config.robot
 Resource          ../Resources/Steps/HomeStep.robot
 Resource          ../Resources/Steps/SingInStep.robot
-Resource          ../Resources/Helper/FakerHelper.robot
+Resource          ../Resources/Helper/FakerBRHelper.robot
 Resource          ../Resources/Steps/CreateAnAccountStep.robot
 
 
