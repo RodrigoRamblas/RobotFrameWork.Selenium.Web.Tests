@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-02-22T17:32:37.521723" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-02-22T17:38:02.699145" rpa="false" schemaversion="5">
 <suite id="s1" name="RobotFrameWork.Selenium.Web.Tests" source="C:\Users\rodri\Documents\RobotFrameWork.Selenium.Web.Tests">
 <suite id="s1-s1" name="Tests" source="C:\Users\rodri\Documents\RobotFrameWork.Selenium.Web.Tests\Tests">
 <suite id="s1-s1-s1" name="CartTests" source="C:\Users\rodri\Documents\RobotFrameWork.Selenium.Web.Tests\Tests\CartTests.robot">
@@ -9,9 +9,9 @@
 <kw name="Get Variable Value" owner="BuiltIn">
 <arg>${BASE_URL_PROD}</arg>
 <doc>Returns variable value or ``default`` if the variable does not exist.</doc>
-<status status="PASS" start="2024-02-22T17:32:38.157447" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-22T17:38:03.284969" elapsed="0.000000"/>
 </kw>
-<msg time="2024-02-22T17:32:38.158447" level="INFO">${base_url} = http://www.automationpractice.pl</msg>
+<msg time="2024-02-22T17:38:03.284969" level="INFO">${base_url} = http://www.automationpractice.pl</msg>
 <var>${base_url}</var>
 <arg>'${environment}' == 'prod'</arg>
 <arg>Get Variable Value</arg>
@@ -24,290 +24,292 @@
 <arg>Get Variable Value</arg>
 <arg>${BASE_URL_DEV}</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-02-22T17:32:38.156447" elapsed="0.002000"/>
+<status status="PASS" start="2024-02-22T17:38:03.284969" elapsed="0.001583"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:32:38.158447" level="INFO">Opening browser 'chrome' to base url 'http://www.automationpractice.pl'.</msg>
+<msg time="2024-02-22T17:38:03.286552" level="INFO">Opening browser 'headlesschrome' to base url 'http://www.automationpractice.pl'.</msg>
 <arg>${base_url}</arg>
-<arg>${browser}</arg>
+<arg>headlesschrome</arg>
+<arg>options=add_argument("--no-sandbox")</arg>
+<arg>options=add_argument("--disable-dev-shm-usage")</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-02-22T17:32:38.158447" elapsed="7.461117"/>
+<status status="PASS" start="2024-02-22T17:38:03.286552" elapsed="6.738405"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-02-22T17:32:45.620561" elapsed="0.131875"/>
+<status status="PASS" start="2024-02-22T17:38:10.025953" elapsed="0.115334"/>
 </kw>
 <arg>chrome</arg>
 <arg>prod</arg>
-<status status="PASS" start="2024-02-22T17:32:38.154149" elapsed="7.599288"/>
+<status status="PASS" start="2024-02-22T17:38:03.283968" elapsed="6.857319"/>
 </kw>
 <kw name="Generate Random Email" owner="FakerHelper">
 <kw name="Email" owner="FakerLibrary">
-<msg time="2024-02-22T17:32:45.759377" level="INFO">${email} = rodrigomoreira@example.com</msg>
+<msg time="2024-02-22T17:38:10.143310" level="INFO">${email} = vmoreira@example.net</msg>
 <var>${email}</var>
-<status status="PASS" start="2024-02-22T17:32:45.757186" elapsed="0.003254"/>
+<status status="PASS" start="2024-02-22T17:38:10.142300" elapsed="0.001010"/>
 </kw>
 <return>
 <value>${email}</value>
-<status status="PASS" start="2024-02-22T17:32:45.760440" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-22T17:38:10.143310" elapsed="0.003551"/>
 </return>
-<msg time="2024-02-22T17:32:45.760440" level="INFO">${Email} = rodrigomoreira@example.com</msg>
+<msg time="2024-02-22T17:38:10.150860" level="INFO">${Email} = vmoreira@example.net</msg>
 <var>${Email}</var>
 <doc>Gera um endereço de e-mail aleatório</doc>
-<status status="PASS" start="2024-02-22T17:32:45.754768" elapsed="0.006806"/>
+<status status="PASS" start="2024-02-22T17:38:10.142300" elapsed="0.012022"/>
 </kw>
 <kw name="Generate Random Name" owner="FakerHelper">
 <kw name="Name" owner="FakerLibrary">
-<msg time="2024-02-22T17:32:45.768070" level="INFO">${name} = Lorena Melo</msg>
+<msg time="2024-02-22T17:38:10.160632" level="INFO">${name} = Emanuelly Gomes</msg>
 <var>${name}</var>
 <doc>:example: 'John Doe'</doc>
-<status status="PASS" start="2024-02-22T17:32:45.766002" elapsed="0.002068"/>
+<status status="PASS" start="2024-02-22T17:38:10.159632" elapsed="0.001000"/>
 </kw>
 <return>
 <value>${name}</value>
-<status status="PASS" start="2024-02-22T17:32:45.768070" elapsed="0.001016"/>
+<status status="PASS" start="2024-02-22T17:38:10.160632" elapsed="0.001000"/>
 </return>
-<msg time="2024-02-22T17:32:45.769086" level="INFO">${First_Name} = Lorena Melo</msg>
+<msg time="2024-02-22T17:38:10.161632" level="INFO">${First_Name} = Emanuelly Gomes</msg>
 <var>${First_Name}</var>
 <doc>Gera um nome aleatório</doc>
-<status status="PASS" start="2024-02-22T17:32:45.763948" elapsed="0.005138"/>
+<status status="PASS" start="2024-02-22T17:38:10.158629" elapsed="0.004003"/>
 </kw>
 <kw name="Generate Random Last Name" owner="FakerHelper">
 <kw name="Last Name" owner="FakerLibrary">
-<msg time="2024-02-22T17:32:45.771112" level="INFO">${last_name} = Duarte</msg>
+<msg time="2024-02-22T17:38:10.166635" level="INFO">${last_name} = Souza</msg>
 <var>${last_name}</var>
-<status status="PASS" start="2024-02-22T17:32:45.771112" elapsed="0.001074"/>
+<status status="PASS" start="2024-02-22T17:38:10.165634" elapsed="0.002000"/>
 </kw>
 <return>
 <value>${last_name}</value>
-<status status="PASS" start="2024-02-22T17:32:45.772186" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-22T17:38:10.168634" elapsed="0.000000"/>
 </return>
-<msg time="2024-02-22T17:32:45.772186" level="INFO">${Last_Name} = Duarte</msg>
+<msg time="2024-02-22T17:38:10.169632" level="INFO">${Last_Name} = Souza</msg>
 <var>${Last_Name}</var>
 <doc>Gera um sobrenome aleatório</doc>
-<status status="PASS" start="2024-02-22T17:32:45.770096" elapsed="0.002090"/>
+<status status="PASS" start="2024-02-22T17:38:10.164633" elapsed="0.004999"/>
 </kw>
 <kw name="Generate Random Password" owner="FakerHelper">
 <kw name="Password" owner="FakerLibrary">
-<msg time="2024-02-22T17:32:45.773184" level="INFO">${password} = 96egVxEw_@</msg>
+<msg time="2024-02-22T17:38:10.173477" level="INFO">${password} = j8Ez(Bf2@r</msg>
 <var>${password}</var>
 <doc>Generate a random password of the specified ``length``.</doc>
-<status status="PASS" start="2024-02-22T17:32:45.773184" elapsed="0.001002"/>
+<status status="PASS" start="2024-02-22T17:38:10.171976" elapsed="0.001501"/>
 </kw>
 <return>
 <value>${password}</value>
-<status status="PASS" start="2024-02-22T17:32:45.774186" elapsed="0.001360"/>
+<status status="PASS" start="2024-02-22T17:38:10.173477" elapsed="0.000000"/>
 </return>
-<msg time="2024-02-22T17:32:45.776558" level="INFO">${Password} = 96egVxEw_@</msg>
+<msg time="2024-02-22T17:38:10.174490" level="INFO">${Password} = j8Ez(Bf2@r</msg>
 <var>${Password}</var>
 <doc>Gera uma senha aleatória</doc>
-<status status="PASS" start="2024-02-22T17:32:45.773184" elapsed="0.004813"/>
+<status status="PASS" start="2024-02-22T17:38:10.171976" elapsed="0.002514"/>
 </kw>
 <kw name="Generate Random Data" owner="FakerHelper">
 <kw name="Date" owner="FakerLibrary">
-<msg time="2024-02-22T17:32:45.801642" level="INFO">${date} = 2008-01-23</msg>
+<msg time="2024-02-22T17:38:10.175532" level="INFO">${date} = 2000-06-14</msg>
 <var>${date}</var>
 <doc>Get a date string between January 1, 1970 and now.</doc>
-<status status="PASS" start="2024-02-22T17:32:45.800510" elapsed="0.002131"/>
+<status status="PASS" start="2024-02-22T17:38:10.175532" elapsed="0.001238"/>
 </kw>
 <return>
 <value>${date}</value>
-<status status="PASS" start="2024-02-22T17:32:45.802641" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-22T17:38:10.176770" elapsed="0.000000"/>
 </return>
-<msg time="2024-02-22T17:32:45.802641" level="INFO">${Data} = 2008-01-23</msg>
+<msg time="2024-02-22T17:38:10.177276" level="INFO">${Data} = 2000-06-14</msg>
 <var>${Data}</var>
 <doc>Gera uma data aleatória</doc>
-<status status="PASS" start="2024-02-22T17:32:45.797431" elapsed="0.006210"/>
+<status status="PASS" start="2024-02-22T17:38:10.174490" elapsed="0.002786"/>
 </kw>
 <kw name="Generate Random Company" owner="FakerHelper">
 <kw name="Company" owner="FakerLibrary">
-<msg time="2024-02-22T17:32:45.804641" level="INFO">${company} = Silva Correia Ltda.</msg>
+<msg time="2024-02-22T17:38:10.179386" level="INFO">${company} = Novaes Viana e Filhos</msg>
 <var>${company}</var>
 <doc>:example: 'Acme Ltd'</doc>
-<status status="PASS" start="2024-02-22T17:32:45.804641" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-22T17:38:10.178375" elapsed="0.001011"/>
 </kw>
 <return>
 <value>${company}</value>
-<status status="PASS" start="2024-02-22T17:32:45.805640" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-22T17:38:10.180545" elapsed="0.000000"/>
 </return>
-<msg time="2024-02-22T17:32:45.805640" level="INFO">${Company} = Silva Correia Ltda.</msg>
+<msg time="2024-02-22T17:38:10.181594" level="INFO">${Company} = Novaes Viana e Filhos</msg>
 <var>${Company}</var>
 <doc>Gera uma empresa aleatória</doc>
-<status status="PASS" start="2024-02-22T17:32:45.803641" elapsed="0.001999"/>
+<status status="PASS" start="2024-02-22T17:38:10.177276" elapsed="0.004318"/>
 </kw>
 <kw name="Generate Random Adddress" owner="FakerHelper">
 <kw name="Address" owner="FakerLibrary">
-<msg time="2024-02-22T17:32:45.808102" level="INFO">${adddress} = Residencial de das Neves, 12
-Aparecida 7ª Seção
-42702844 Santos Alegre / AL</msg>
+<msg time="2024-02-22T17:38:10.183048" level="INFO">${adddress} = Vila Moraes, 31
+Caiçaras
+84014420 Gonçalves de Minas / MA</msg>
 <var>${adddress}</var>
 <doc>:example: '791 Crist Parks, Sashabury, IL 86039-9874'</doc>
-<status status="PASS" start="2024-02-22T17:32:45.806640" elapsed="0.005576"/>
+<status status="PASS" start="2024-02-22T17:38:10.183048" elapsed="0.001216"/>
 </kw>
 <return>
 <value>${adddress}</value>
-<status status="PASS" start="2024-02-22T17:32:45.813546" elapsed="0.001497"/>
+<status status="PASS" start="2024-02-22T17:38:10.184264" elapsed="0.000000"/>
 </return>
-<msg time="2024-02-22T17:32:45.815043" level="INFO">${Address} = Residencial de das Neves, 12
-Aparecida 7ª Seção
-42702844 Santos Alegre / AL</msg>
+<msg time="2024-02-22T17:38:10.184264" level="INFO">${Address} = Vila Moraes, 31
+Caiçaras
+84014420 Gonçalves de Minas / MA</msg>
 <var>${Address}</var>
 <doc>Gera um endereço aleatório</doc>
-<status status="PASS" start="2024-02-22T17:32:45.806640" elapsed="0.008403"/>
+<status status="PASS" start="2024-02-22T17:38:10.183048" elapsed="0.001216"/>
 </kw>
 <kw name="Generate Random Adddress" owner="FakerHelper">
 <kw name="Address" owner="FakerLibrary">
-<msg time="2024-02-22T17:32:45.817136" level="INFO">${adddress} = Passarela de Nascimento, 20
+<msg time="2024-02-22T17:38:10.185271" level="INFO">${adddress} = Trevo Rocha, 79
 Boa Esperança
-36910129 Lopes da Prata / BA</msg>
+83810-204 Gonçalves / MS</msg>
 <var>${adddress}</var>
 <doc>:example: '791 Crist Parks, Sashabury, IL 86039-9874'</doc>
-<status status="PASS" start="2024-02-22T17:32:45.817136" elapsed="0.001004"/>
+<status status="PASS" start="2024-02-22T17:38:10.185271" elapsed="0.001011"/>
 </kw>
 <return>
 <value>${adddress}</value>
-<status status="PASS" start="2024-02-22T17:32:45.818140" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-22T17:38:10.186282" elapsed="0.000000"/>
 </return>
-<msg time="2024-02-22T17:32:45.818140" level="INFO">${Address_line_2} = Passarela de Nascimento, 20
+<msg time="2024-02-22T17:38:10.186282" level="INFO">${Address_line_2} = Trevo Rocha, 79
 Boa Esperança
-36910129 Lopes da Prata / BA</msg>
+83810-204 Gonçalves / MS</msg>
 <var>${Address_line_2}</var>
 <doc>Gera um endereço aleatório</doc>
-<status status="PASS" start="2024-02-22T17:32:45.816046" elapsed="0.002094"/>
+<status status="PASS" start="2024-02-22T17:38:10.185271" elapsed="0.001011"/>
 </kw>
 <kw name="Generate Random City" owner="FakerHelper">
 <kw name="City" owner="FakerLibrary">
-<msg time="2024-02-22T17:32:45.819354" level="INFO">${city} = Costela de Goiás</msg>
+<msg time="2024-02-22T17:38:10.189763" level="INFO">${city} = Lima</msg>
 <var>${city}</var>
 <doc>:example: 'Sashabury'</doc>
-<status status="PASS" start="2024-02-22T17:32:45.819354" elapsed="0.001009"/>
+<status status="PASS" start="2024-02-22T17:38:10.188697" elapsed="0.002084"/>
 </kw>
 <return>
 <value>${city}</value>
-<status status="PASS" start="2024-02-22T17:32:45.820363" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-22T17:38:10.190781" elapsed="0.001033"/>
 </return>
-<msg time="2024-02-22T17:32:45.820363" level="INFO">${City} = Costela de Goiás</msg>
+<msg time="2024-02-22T17:38:10.191814" level="INFO">${City} = Lima</msg>
 <var>${City}</var>
 <doc>Gera um nome de cidade aleatório</doc>
-<status status="PASS" start="2024-02-22T17:32:45.818140" elapsed="0.002223"/>
+<status status="PASS" start="2024-02-22T17:38:10.187661" elapsed="0.005656"/>
 </kw>
 <kw name="Get Us States" owner="RandomHelper">
-<msg time="2024-02-22T17:32:45.821761" level="INFO">${State} = Wisconsin</msg>
+<msg time="2024-02-22T17:38:10.193317" level="INFO">${State} = Montana</msg>
 <var>${State}</var>
-<status status="PASS" start="2024-02-22T17:32:45.821761" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-22T17:38:10.193317" elapsed="0.001479"/>
 </kw>
 <kw name="Generate Postal Code" owner="RandomHelper">
-<msg time="2024-02-22T17:32:45.822818" level="INFO">${Zip_postal_code} = 51884</msg>
+<msg time="2024-02-22T17:38:10.195845" level="INFO">${Zip_postal_code} = 76215</msg>
 <var>${Zip_postal_code}</var>
-<status status="PASS" start="2024-02-22T17:32:45.822818" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-22T17:38:10.194796" elapsed="0.002047"/>
 </kw>
 <kw name="Generate Random Country" owner="FakerHelper">
 <kw name="Country" owner="FakerLibrary">
-<msg time="2024-02-22T17:32:45.827138" level="INFO">${country} = Portugal</msg>
+<msg time="2024-02-22T17:38:10.198974" level="INFO">${country} = Estados Unidos</msg>
 <var>${country}</var>
-<status status="PASS" start="2024-02-22T17:32:45.825132" elapsed="0.003005"/>
+<status status="PASS" start="2024-02-22T17:38:10.198974" elapsed="0.001458"/>
 </kw>
 <return>
 <value>${country}</value>
-<status status="PASS" start="2024-02-22T17:32:45.828137" elapsed="0.000999"/>
+<status status="PASS" start="2024-02-22T17:38:10.200432" elapsed="0.001002"/>
 </return>
-<msg time="2024-02-22T17:32:45.829136" level="INFO">${Country} = Portugal</msg>
+<msg time="2024-02-22T17:38:10.202432" level="INFO">${Country} = Estados Unidos</msg>
 <var>${Country}</var>
 <doc>Gera um nome de país aleatório</doc>
-<status status="PASS" start="2024-02-22T17:32:45.823823" elapsed="0.005313"/>
+<status status="PASS" start="2024-02-22T17:38:10.197901" elapsed="0.004531"/>
 </kw>
 <kw name="Generate Random Phone Number" owner="FakerHelper">
 <kw name="Phone Number" owner="FakerLibrary">
-<msg time="2024-02-22T17:32:45.830398" level="INFO">${phone} = +55 81 9099-1311</msg>
+<msg time="2024-02-22T17:38:10.206802" level="INFO">${phone} = (021) 0833 5705</msg>
 <var>${phone}</var>
-<status status="PASS" start="2024-02-22T17:32:45.830398" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-22T17:38:10.205801" elapsed="0.002002"/>
 </kw>
 <return>
 <value>${phone}</value>
-<status status="PASS" start="2024-02-22T17:32:45.831400" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-22T17:38:10.208804" elapsed="0.000000"/>
 </return>
-<msg time="2024-02-22T17:32:45.831400" level="INFO">${Home_phone} = +55 81 9099-1311</msg>
+<msg time="2024-02-22T17:38:10.208804" level="INFO">${Home_phone} = (021) 0833 5705</msg>
 <var>${Home_phone}</var>
 <doc>Gera um número de telefone aleatório</doc>
-<status status="PASS" start="2024-02-22T17:32:45.830398" elapsed="0.001002"/>
+<status status="PASS" start="2024-02-22T17:38:10.204786" elapsed="0.005393"/>
 </kw>
 <kw name="Generate Random Phone Number" owner="FakerHelper">
 <kw name="Phone Number" owner="FakerLibrary">
-<msg time="2024-02-22T17:32:45.832795" level="INFO">${phone} = 0500 280 2825</msg>
+<msg time="2024-02-22T17:38:10.214520" level="INFO">${phone} = 61 3294-7913</msg>
 <var>${phone}</var>
-<status status="PASS" start="2024-02-22T17:32:45.832795" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-22T17:38:10.213184" elapsed="0.001336"/>
 </kw>
 <return>
 <value>${phone}</value>
-<status status="PASS" start="2024-02-22T17:32:45.832795" elapsed="0.001161"/>
+<status status="PASS" start="2024-02-22T17:38:10.215521" elapsed="0.000000"/>
 </return>
-<msg time="2024-02-22T17:32:45.833956" level="INFO">${Mobile_phone} = 0500 280 2825</msg>
+<msg time="2024-02-22T17:38:10.215521" level="INFO">${Mobile_phone} = 61 3294-7913</msg>
 <var>${Mobile_phone}</var>
 <doc>Gera um número de telefone aleatório</doc>
-<status status="PASS" start="2024-02-22T17:32:45.831400" elapsed="0.002556"/>
+<status status="PASS" start="2024-02-22T17:38:10.211184" elapsed="0.004337"/>
 </kw>
 <kw name="Generate Random Text" owner="FakerHelper">
 <kw name="Text" owner="FakerLibrary">
-<msg time="2024-02-22T17:32:45.835404" level="INFO">${text} = Distinctio voluptas cupiditate consequuntur ducimus. Sunt optio asperiores porro modi quibusdam voluptas.
-Ratione dolor nam cum ea. Harum porro qui optio.</msg>
+<msg time="2024-02-22T17:38:10.218860" level="INFO">${text} = Rem a tempora nostrum ut esse mollitia exercitationem.
+Ipsum minus saepe magnam minus atque quisquam. Dicta velit necessitatibus cumque dicta ad. Amet quisquam architecto ratione omnis.</msg>
 <var>${text}</var>
 <doc>Generate a text string.</doc>
-<status status="PASS" start="2024-02-22T17:32:45.835404" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-22T17:38:10.217734" elapsed="0.001126"/>
 </kw>
 <return>
 <value>${text}</value>
-<status status="PASS" start="2024-02-22T17:32:45.835404" elapsed="0.001108"/>
+<status status="PASS" start="2024-02-22T17:38:10.218860" elapsed="0.000000"/>
 </return>
-<msg time="2024-02-22T17:32:45.836512" level="INFO">${Additional_information} = Distinctio voluptas cupiditate consequuntur ducimus. Sunt optio asperiores porro modi quibusdam voluptas.
-Ratione dolor nam cum ea. Harum porro qui optio.</msg>
+<msg time="2024-02-22T17:38:10.218860" level="INFO">${Additional_information} = Rem a tempora nostrum ut esse mollitia exercitationem.
+Ipsum minus saepe magnam minus atque quisquam. Dicta velit necessitatibus cumque dicta ad. Amet quisquam architecto ratione omnis.</msg>
 <var>${Additional_information}</var>
 <doc>Gera um texto aleatório</doc>
-<status status="PASS" start="2024-02-22T17:32:45.833956" elapsed="0.002556"/>
+<status status="PASS" start="2024-02-22T17:38:10.217734" elapsed="0.002421"/>
 </kw>
 <kw name="Generate Random Name" owner="FakerHelper">
 <kw name="Name" owner="FakerLibrary">
-<msg time="2024-02-22T17:32:45.837512" level="INFO">${name} = Marcela Pinto</msg>
+<msg time="2024-02-22T17:38:10.222169" level="INFO">${name} = Clarice Jesus</msg>
 <var>${name}</var>
 <doc>:example: 'John Doe'</doc>
-<status status="PASS" start="2024-02-22T17:32:45.837512" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-22T17:38:10.221169" elapsed="0.001000"/>
 </kw>
 <return>
 <value>${name}</value>
-<status status="PASS" start="2024-02-22T17:32:45.837512" elapsed="0.001065"/>
+<status status="PASS" start="2024-02-22T17:38:10.222169" elapsed="0.000000"/>
 </return>
-<msg time="2024-02-22T17:32:45.838577" level="INFO">${Please_assign_an_addrress_title_for_future_reference} = Marcela Pinto</msg>
+<msg time="2024-02-22T17:38:10.222169" level="INFO">${Please_assign_an_addrress_title_for_future_reference} = Clarice Jesus</msg>
 <var>${Please_assign_an_addrress_title_for_future_reference}</var>
 <doc>Gera um nome aleatório</doc>
-<status status="PASS" start="2024-02-22T17:32:45.836512" elapsed="0.002065"/>
+<status status="PASS" start="2024-02-22T17:38:10.220155" elapsed="0.003184"/>
 </kw>
 <kw name="Quando clico no botão Sign in" owner="HomeStep">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:32:45.839577" level="INFO">Clicking element '//div[@id='contact-link']/preceding-sibling::div[@class='header_user_info']/a[@class='login']'.</msg>
+<msg time="2024-02-22T17:38:10.224670" level="INFO">Clicking element '//div[@id='contact-link']/preceding-sibling::div[@class='header_user_info']/a[@class='login']'.</msg>
 <arg>${SING_IN_BUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-22T17:32:45.839577" elapsed="1.329802"/>
+<status status="PASS" start="2024-02-22T17:38:10.223339" elapsed="1.379598"/>
 </kw>
-<status status="PASS" start="2024-02-22T17:32:45.838577" elapsed="1.331824"/>
+<status status="PASS" start="2024-02-22T17:38:10.223339" elapsed="1.379598"/>
 </kw>
 <kw name="E preencho o campo create e-mail address" owner="SingInStep">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:32:47.171410" level="INFO">Typing text 'rodrigomoreira@example.com' into text field 'email_create'.</msg>
+<msg time="2024-02-22T17:38:11.603983" level="INFO">Typing text 'vmoreira@example.net' into text field 'email_create'.</msg>
 <arg>${CREATE_EMAIL_ADDRESS_FIELD}</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-22T17:32:47.170401" elapsed="0.143604"/>
+<status status="PASS" start="2024-02-22T17:38:11.603983" elapsed="0.117452"/>
 </kw>
 <arg>${Email}</arg>
-<status status="PASS" start="2024-02-22T17:32:47.170401" elapsed="0.145603"/>
+<status status="PASS" start="2024-02-22T17:38:11.602937" elapsed="0.118498"/>
 </kw>
 <kw name="E clico em Create an account" owner="SingInStep">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:32:47.325361" level="INFO">Clicking element 'SubmitCreate'.</msg>
+<msg time="2024-02-22T17:38:11.722464" level="INFO">Clicking element 'SubmitCreate'.</msg>
 <arg>${CREATE_AN_ACCOUNT_BUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-22T17:32:47.323361" elapsed="0.085767"/>
+<status status="PASS" start="2024-02-22T17:38:11.722464" elapsed="0.107378"/>
 </kw>
-<status status="PASS" start="2024-02-22T17:32:47.321366" elapsed="0.088764"/>
+<status status="PASS" start="2024-02-22T17:38:11.722464" elapsed="0.108383"/>
 </kw>
 <kw name="Então devo informar os meus dados para criar a conta" owner="CreateAnAccountStep">
 <kw name="Então devo informar os meus dados create account" owner="Data">
@@ -315,248 +317,248 @@ Ratione dolor nam cum ea. Harum porro qui optio.</msg>
 <arg>${TITLE_MR_RADIO_BUTTON}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-02-22T17:32:47.413130" elapsed="1.553662"/>
+<status status="PASS" start="2024-02-22T17:38:11.832915" elapsed="1.129682"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:32:48.968054" level="INFO">Clicking element '//input[@id='id_gender1']'.</msg>
+<msg time="2024-02-22T17:38:12.965598" level="INFO">Clicking element '//input[@id='id_gender1']'.</msg>
 <arg>${TITLE_MR_RADIO_BUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-22T17:32:48.966792" elapsed="0.088932"/>
+<status status="PASS" start="2024-02-22T17:38:12.964596" elapsed="0.099240"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:32:49.055724" level="INFO">Typing text 'Lorena Melo' into text field 'customer_firstname'.</msg>
+<msg time="2024-02-22T17:38:13.065835" level="INFO">Typing text 'Emanuelly Gomes' into text field 'customer_firstname'.</msg>
 <arg>${FIRST_NAME_FIELD}</arg>
 <arg>${first_name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-22T17:32:49.055724" elapsed="0.152483"/>
+<status status="PASS" start="2024-02-22T17:38:13.064881" elapsed="0.224351"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:32:49.212452" level="INFO">Typing text 'Duarte' into text field 'customer_lastname'.</msg>
+<msg time="2024-02-22T17:38:13.290231" level="INFO">Typing text 'Souza' into text field 'customer_lastname'.</msg>
 <arg>${LAST_NAME_FIELD}</arg>
 <arg>${last_name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-22T17:32:49.210282" elapsed="0.190138"/>
+<status status="PASS" start="2024-02-22T17:38:13.290231" elapsed="0.151561"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:32:49.402416" level="INFO">Typing text 'rodrigomoreira@example.com' into text field 'email'.</msg>
+<msg time="2024-02-22T17:38:13.441792" level="INFO">Typing text 'vmoreira@example.net' into text field 'email'.</msg>
 <arg>${EMAIL_FIELD}</arg>
 <arg>${e-mail}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-22T17:32:49.400420" elapsed="0.206869"/>
+<status status="PASS" start="2024-02-22T17:38:13.441792" elapsed="0.143396"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:32:49.609300" level="INFO">Typing text '96egVxEw_@' into text field 'passwd'.</msg>
+<msg time="2024-02-22T17:38:13.587198" level="INFO">Typing text 'j8Ez(Bf2@r' into text field 'passwd'.</msg>
 <arg>${PASS_WORD_FIELD}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-22T17:32:49.607289" elapsed="0.108995"/>
+<status status="PASS" start="2024-02-22T17:38:13.586198" elapsed="0.098521"/>
 </kw>
 <kw name="Preencher Data de Nascimento" owner="Data">
 <kw name="Split String" owner="String">
-<msg time="2024-02-22T17:32:49.717329" level="INFO">${year} = 2008</msg>
-<msg time="2024-02-22T17:32:49.718353" level="INFO">${month} = 01</msg>
-<msg time="2024-02-22T17:32:49.718353" level="INFO">${day} = 23</msg>
+<msg time="2024-02-22T17:38:13.687723" level="INFO">${year} = 2000</msg>
+<msg time="2024-02-22T17:38:13.687723" level="INFO">${month} = 06</msg>
+<msg time="2024-02-22T17:38:13.687723" level="INFO">${day} = 14</msg>
 <var>${year}</var>
 <var>${month}</var>
 <var>${day}</var>
 <arg>${data}</arg>
 <arg>-</arg>
 <doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
-<status status="PASS" start="2024-02-22T17:32:49.717329" elapsed="0.001024"/>
+<status status="PASS" start="2024-02-22T17:38:13.686722" elapsed="0.001001"/>
 </kw>
 <kw name="Remover Zero à Esquerda" owner="Data">
 <kw name="Convert To Integer" owner="BuiltIn">
-<msg time="2024-02-22T17:32:49.720617" level="INFO">${value} = 23</msg>
+<msg time="2024-02-22T17:38:13.688720" level="INFO">${value} = 14</msg>
 <var>${value}</var>
 <arg>${value}</arg>
 <doc>Converts the given item to an integer number.</doc>
-<status status="PASS" start="2024-02-22T17:32:49.719505" elapsed="0.001112"/>
+<status status="PASS" start="2024-02-22T17:38:13.688720" elapsed="0.000998"/>
 </kw>
 <kw name="Convert To String" owner="BuiltIn">
-<msg time="2024-02-22T17:32:49.721625" level="INFO">${value} = 23</msg>
+<msg time="2024-02-22T17:38:13.689718" level="INFO">${value} = 14</msg>
 <var>${value}</var>
 <arg>${value}</arg>
 <doc>Converts the given item to a Unicode string.</doc>
-<status status="PASS" start="2024-02-22T17:32:49.720617" elapsed="0.001008"/>
+<status status="PASS" start="2024-02-22T17:38:13.689718" elapsed="0.000000"/>
 </kw>
 <return>
 <value>${value}</value>
-<status status="PASS" start="2024-02-22T17:32:49.721625" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-22T17:38:13.689718" elapsed="0.000000"/>
 </return>
-<msg time="2024-02-22T17:32:49.721625" level="INFO">${day} = 23</msg>
+<msg time="2024-02-22T17:38:13.689718" level="INFO">${day} = 14</msg>
 <var>${day}</var>
 <arg>${day}</arg>
-<status status="PASS" start="2024-02-22T17:32:49.719505" elapsed="0.002120"/>
+<status status="PASS" start="2024-02-22T17:38:13.688720" elapsed="0.002000"/>
 </kw>
 <kw name="Remover Zero à Esquerda" owner="Data">
 <kw name="Convert To Integer" owner="BuiltIn">
-<msg time="2024-02-22T17:32:49.722637" level="INFO">${value} = 1</msg>
+<msg time="2024-02-22T17:38:13.690720" level="INFO">${value} = 6</msg>
 <var>${value}</var>
 <arg>${value}</arg>
 <doc>Converts the given item to an integer number.</doc>
-<status status="PASS" start="2024-02-22T17:32:49.722637" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-22T17:38:13.690720" elapsed="0.000000"/>
 </kw>
 <kw name="Convert To String" owner="BuiltIn">
-<msg time="2024-02-22T17:32:49.723640" level="INFO">${value} = 1</msg>
+<msg time="2024-02-22T17:38:13.691719" level="INFO">${value} = 6</msg>
 <var>${value}</var>
 <arg>${value}</arg>
 <doc>Converts the given item to a Unicode string.</doc>
-<status status="PASS" start="2024-02-22T17:32:49.723640" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-22T17:38:13.691719" elapsed="0.000000"/>
 </kw>
 <return>
 <value>${value}</value>
-<status status="PASS" start="2024-02-22T17:32:49.723640" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-22T17:38:13.691719" elapsed="0.000000"/>
 </return>
-<msg time="2024-02-22T17:32:49.723640" level="INFO">${month} = 1</msg>
+<msg time="2024-02-22T17:38:13.691719" level="INFO">${month} = 6</msg>
 <var>${month}</var>
 <arg>${month}</arg>
-<status status="PASS" start="2024-02-22T17:32:49.722637" elapsed="0.002255"/>
+<status status="PASS" start="2024-02-22T17:38:13.690720" elapsed="0.000999"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${DAY_SELECT}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-02-22T17:32:49.724892" elapsed="0.014994"/>
+<status status="PASS" start="2024-02-22T17:38:13.692720" elapsed="0.015197"/>
 </kw>
 <kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:32:49.740907" level="INFO">Selecting options from selection list 'days' by value 23.</msg>
+<msg time="2024-02-22T17:38:13.708916" level="INFO">Selecting options from selection list 'days' by value 14.</msg>
 <arg>${DAY_SELECT}</arg>
 <arg>${day}</arg>
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2024-02-22T17:32:49.740907" elapsed="0.083546"/>
+<status status="PASS" start="2024-02-22T17:38:13.708916" elapsed="0.115841"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${MONTHS_SELECT}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-02-22T17:32:49.824453" elapsed="0.014884"/>
+<status status="PASS" start="2024-02-22T17:38:13.825781" elapsed="0.020593"/>
 </kw>
 <kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:32:49.840350" level="INFO">Selecting options from selection list 'months' by value 1.</msg>
+<msg time="2024-02-22T17:38:13.847621" level="INFO">Selecting options from selection list 'months' by value 6.</msg>
 <arg>${MONTHS_SELECT}</arg>
 <arg>${month}</arg>
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2024-02-22T17:32:49.840350" elapsed="0.078711"/>
+<status status="PASS" start="2024-02-22T17:38:13.846374" elapsed="0.074176"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${YEARS_SELECT}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-02-22T17:32:49.919061" elapsed="0.014178"/>
+<status status="PASS" start="2024-02-22T17:38:13.921589" elapsed="0.014660"/>
 </kw>
 <kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:32:49.934293" level="INFO">Selecting options from selection list 'years' by value 2008.</msg>
+<msg time="2024-02-22T17:38:13.937376" level="INFO">Selecting options from selection list 'years' by value 2000.</msg>
 <arg>${YEARS_SELECT}</arg>
 <arg>${year}</arg>
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2024-02-22T17:32:49.934293" elapsed="0.060976"/>
+<status status="PASS" start="2024-02-22T17:38:13.937376" elapsed="0.080746"/>
 </kw>
 <arg>${data}</arg>
-<status status="PASS" start="2024-02-22T17:32:49.716284" elapsed="0.279981"/>
+<status status="PASS" start="2024-02-22T17:38:13.684719" elapsed="0.333403"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:32:49.996265" level="INFO">Clicking element 'newsletter'.</msg>
+<msg time="2024-02-22T17:38:14.021169" level="INFO">Clicking element 'newsletter'.</msg>
 <arg>${SING_UP_FOR_OUR_NEWSLETTER_CHECK_BOX}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-22T17:32:49.996265" elapsed="0.048469"/>
+<status status="PASS" start="2024-02-22T17:38:14.019126" elapsed="0.048266"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:32:50.046872" level="INFO">Clicking element 'submitAccount'.</msg>
+<msg time="2024-02-22T17:38:14.068476" level="INFO">Clicking element 'submitAccount'.</msg>
 <arg>${REGISTER_BUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-22T17:32:50.044734" elapsed="2.134133"/>
+<status status="PASS" start="2024-02-22T17:38:14.067392" elapsed="1.320724"/>
 </kw>
 <arg>${first_name}</arg>
 <arg>${last_name}</arg>
 <arg>${e-mail}</arg>
 <arg>${password}</arg>
 <arg>${data}</arg>
-<status status="PASS" start="2024-02-22T17:32:47.413130" elapsed="4.765737"/>
+<status status="PASS" start="2024-02-22T17:38:11.831900" elapsed="3.556808"/>
 </kw>
 <arg>${First_Name}</arg>
 <arg>${Last_Name}</arg>
 <arg>${Email}</arg>
 <arg>${Password}</arg>
 <arg>${Data}</arg>
-<status status="PASS" start="2024-02-22T17:32:47.411131" elapsed="4.767736"/>
+<status status="PASS" start="2024-02-22T17:38:11.830847" elapsed="3.557861"/>
 </kw>
 <kw name="E clico em Women no menu" owner="HomeStep">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:32:52.180935" level="INFO">Clicking element '//ul[@class="sf-menu clearfix menu-content sf-js-enabled sf-arrows"]//a[@title="Women"]'.</msg>
+<msg time="2024-02-22T17:38:15.389971" level="INFO">Clicking element '//ul[@class="sf-menu clearfix menu-content sf-js-enabled sf-arrows"]//a[@title="Women"]'.</msg>
 <arg>${WOMAN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-22T17:32:52.179931" elapsed="1.839101"/>
+<status status="PASS" start="2024-02-22T17:38:15.389971" elapsed="1.819572"/>
 </kw>
-<status status="PASS" start="2024-02-22T17:32:52.179931" elapsed="1.840540"/>
+<status status="PASS" start="2024-02-22T17:38:15.389971" elapsed="1.819572"/>
 </kw>
 <kw name="E compro a primeira roupa" owner="HomeStep">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${PRIMEIRA_ROUPA}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-02-22T17:32:54.021502" elapsed="0.026765"/>
+<status status="PASS" start="2024-02-22T17:38:17.213543" elapsed="0.044490"/>
 </kw>
 <kw name="Mouse Over" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:32:54.049780" level="INFO">Simulating Mouse Over on element '//*[@id="center_column" ]/ul/li[1]/div'.</msg>
+<msg time="2024-02-22T17:38:17.259034" level="INFO">Simulating Mouse Over on element '//*[@id="center_column" ]/ul/li[1]/div'.</msg>
 <arg>${PRIMEIRA_ROUPA}</arg>
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<status status="PASS" start="2024-02-22T17:32:54.048267" elapsed="0.294304"/>
+<status status="PASS" start="2024-02-22T17:38:17.258033" elapsed="0.282021"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ADD_TO_COMPARE}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-02-22T17:32:54.343572" elapsed="0.065568"/>
+<status status="PASS" start="2024-02-22T17:38:17.541343" elapsed="0.029380"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:32:54.412214" level="INFO">Clicking element '//a[contains(text(),'Add to Compare')]'.</msg>
+<msg time="2024-02-22T17:38:17.571733" level="INFO">Clicking element '//a[contains(text(),'Add to Compare')]'.</msg>
 <arg>${ADD_TO_COMPARE}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-22T17:32:54.410147" elapsed="0.121642"/>
+<status status="PASS" start="2024-02-22T17:38:17.570723" elapsed="0.072973"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${COMPARE}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-02-22T17:32:54.533795" elapsed="0.055223"/>
+<status status="PASS" start="2024-02-22T17:38:17.645697" elapsed="0.038205"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:32:54.589018" level="INFO">Clicking element '//span[contains(.,'Compar')]'.</msg>
+<msg time="2024-02-22T17:38:17.684912" level="INFO">Clicking element '//span[contains(.,'Compar')]'.</msg>
 <arg>${COMPARE}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-22T17:32:54.589018" elapsed="2.049606"/>
+<status status="PASS" start="2024-02-22T17:38:17.683902" elapsed="1.574275"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ADD_TO_CART}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-02-22T17:32:56.639658" elapsed="0.067979"/>
+<status status="PASS" start="2024-02-22T17:38:19.259212" elapsed="0.027499"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:32:56.708637" level="INFO">Clicking element '//div[@class="comparison_product_infos"]//a[@title="Add to cart"]'.</msg>
+<msg time="2024-02-22T17:38:19.286711" level="INFO">Clicking element '//div[@class="comparison_product_infos"]//a[@title="Add to cart"]'.</msg>
 <arg>${ADD_TO_CART}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-22T17:32:56.707637" elapsed="0.063564"/>
+<status status="PASS" start="2024-02-22T17:38:19.286711" elapsed="0.036134"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${PROCEED_TO_CHECKOUT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-02-22T17:32:56.771201" elapsed="0.751839"/>
+<status status="PASS" start="2024-02-22T17:38:19.322845" elapsed="0.470076"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:32:57.524040" level="INFO">Clicking element '//div[@class="layer_cart_cart col-xs-12 col-md-6"]//a[@title="Proceed to checkout"]'.</msg>
+<msg time="2024-02-22T17:38:19.793916" level="INFO">Clicking element '//div[@class="layer_cart_cart col-xs-12 col-md-6"]//a[@title="Proceed to checkout"]'.</msg>
 <arg>${PROCEED_TO_CHECKOUT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-22T17:32:57.524040" elapsed="1.409074"/>
+<status status="PASS" start="2024-02-22T17:38:19.792921" elapsed="1.309114"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${PROCEED_TO_CHECKOUT_END}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-02-22T17:32:58.934115" elapsed="0.030494"/>
+<status status="PASS" start="2024-02-22T17:38:21.102035" elapsed="0.032032"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:32:58.965609" level="INFO">Clicking element '//a[@class="button btn btn-default standard-checkout button-medium" and @title="Proceed to checkout"]'.</msg>
+<msg time="2024-02-22T17:38:21.135066" level="INFO">Clicking element '//a[@class="button btn btn-default standard-checkout button-medium" and @title="Proceed to checkout"]'.</msg>
 <arg>${PROCEED_TO_CHECKOUT_END}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-22T17:32:58.965609" elapsed="1.422529"/>
+<status status="PASS" start="2024-02-22T17:38:21.135066" elapsed="1.140860"/>
 </kw>
-<status status="PASS" start="2024-02-22T17:32:54.020471" elapsed="6.367667"/>
+<status status="PASS" start="2024-02-22T17:38:17.211546" elapsed="5.064380"/>
 </kw>
 <kw name="E preencho o meu endereço e outros dados para compra" owner="HomeStep">
 <kw name="Preencher os dados para compra" owner="Data">
@@ -564,82 +566,82 @@ Ratione dolor nam cum ea. Harum porro qui optio.</msg>
 <arg>${COMPANY_FIELD}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-02-22T17:33:00.390577" elapsed="0.070395"/>
+<status status="PASS" start="2024-02-22T17:38:22.285207" elapsed="0.030469"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:33:00.465113" level="INFO">Typing text 'Silva Correia Ltda.' into text field 'company'.</msg>
+<msg time="2024-02-22T17:38:22.316676" level="INFO">Typing text 'Novaes Viana e Filhos' into text field 'company'.</msg>
 <arg>${COMPANY_FIELD}</arg>
 <arg>${company}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-22T17:33:00.462034" elapsed="0.129339"/>
+<status status="PASS" start="2024-02-22T17:38:22.315676" elapsed="0.123650"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:33:00.591373" level="INFO">Typing text 'Residencial de das Neves, 12
-Aparecida 7ª Seção
-42702844 Santos Alegre / AL' into text field 'address1'.</msg>
+<msg time="2024-02-22T17:38:22.442404" level="INFO">Typing text 'Vila Moraes, 31
+Caiçaras
+84014420 Gonçalves de Minas / MA' into text field 'address1'.</msg>
 <arg>${ADDRESS_FIELD}</arg>
 <arg>${address}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-22T17:33:00.591373" elapsed="1.209844"/>
+<status status="PASS" start="2024-02-22T17:38:22.440355" elapsed="0.599100"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:33:01.803334" level="INFO">Typing text 'Passarela de Nascimento, 20
+<msg time="2024-02-22T17:38:23.040427" level="INFO">Typing text 'Trevo Rocha, 79
 Boa Esperança
-36910129 Lopes da Prata / BA' into text field 'address2'.</msg>
+83810-204 Gonçalves / MS' into text field 'address2'.</msg>
 <arg>${ADDRESS_LINE_2_FIELD}</arg>
 <arg>${address_line_2}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-22T17:33:01.802302" elapsed="1.832217"/>
+<status status="PASS" start="2024-02-22T17:38:23.039455" elapsed="0.832842"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:33:03.635523" level="INFO">Typing text 'Costela de Goiás' into text field 'city'.</msg>
+<msg time="2024-02-22T17:38:23.875757" level="INFO">Typing text 'Lima' into text field 'city'.</msg>
 <arg>${CITY_FIELD}</arg>
 <arg>${city}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-22T17:33:03.635523" elapsed="0.209781"/>
+<status status="PASS" start="2024-02-22T17:38:23.872297" elapsed="0.094456"/>
 </kw>
 <kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:33:03.847549" level="INFO">Selecting options from selection list '//*[@id="uniform-id_state"]/select[@id='id_state']' by value 2.</msg>
+<msg time="2024-02-22T17:38:23.968213" level="INFO">Selecting options from selection list '//*[@id="uniform-id_state"]/select[@id='id_state']' by value 2.</msg>
 <arg>${STATE_FIELD}</arg>
 <arg>2</arg>
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2024-02-22T17:33:03.846524" elapsed="0.107303"/>
+<status status="PASS" start="2024-02-22T17:38:23.966753" elapsed="0.104060"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:33:03.954832" level="INFO">Typing text '51884' into text field 'postcode'.</msg>
+<msg time="2024-02-22T17:38:24.071929" level="INFO">Typing text '76215' into text field 'postcode'.</msg>
 <arg>${ZIP_POSTAL_CODE_FIELD}</arg>
 <arg>${zip_postal_code}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-22T17:33:03.954832" elapsed="0.113791"/>
+<status status="PASS" start="2024-02-22T17:38:24.070813" elapsed="0.144800"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:33:04.068623" level="INFO">Typing text '+55 81 9099-1311' into text field 'phone'.</msg>
+<msg time="2024-02-22T17:38:24.216786" level="INFO">Typing text '(021) 0833 5705' into text field 'phone'.</msg>
 <arg>${HOME_PHONE_FIELD}</arg>
 <arg>${home_phone}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-22T17:33:04.068623" elapsed="0.106475"/>
+<status status="PASS" start="2024-02-22T17:38:24.215613" elapsed="0.182051"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:33:04.181122" level="INFO">Typing text '0500 280 2825' into text field 'phone_mobile'.</msg>
+<msg time="2024-02-22T17:38:24.399729" level="INFO">Typing text '61 3294-7913' into text field 'phone_mobile'.</msg>
 <arg>${MOBILE_PHONE_FIELD}</arg>
 <arg>${mobile_phone}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-22T17:33:04.175098" elapsed="0.138021"/>
+<status status="PASS" start="2024-02-22T17:38:24.398689" elapsed="0.118804"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:33:04.316499" level="INFO">Typing text 'Distinctio voluptas cupiditate consequuntur ducimus. Sunt optio asperiores porro modi quibusdam voluptas.
-Ratione dolor nam cum ea. Harum porro qui optio.' into text field 'other'.</msg>
+<msg time="2024-02-22T17:38:24.518538" level="INFO">Typing text 'Rem a tempora nostrum ut esse mollitia exercitationem.
+Ipsum minus saepe magnam minus atque quisquam. Dicta velit necessitatibus cumque dicta ad. Amet quisquam architecto ratione omnis.' into text field 'other'.</msg>
 <arg>${ADDITIONAL_INFORMATION_FIELD}</arg>
 <arg>${additional_information}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-22T17:33:04.314398" elapsed="0.276289"/>
+<status status="PASS" start="2024-02-22T17:38:24.517493" elapsed="0.208718"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:33:04.590687" level="INFO">Typing text 'Marcela Pinto' into text field 'alias'.</msg>
+<msg time="2024-02-22T17:38:24.727325" level="INFO">Typing text 'Clarice Jesus' into text field 'alias'.</msg>
 <arg>${PLEASE_ASSING_AN_ADDRESS_TITLE_FOR_FUTURE_REFERENCE_FIELD}</arg>
 <arg>${please_assign_an_addrress_title_for_future_reference}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-22T17:33:04.590687" elapsed="0.101453"/>
+<status status="PASS" start="2024-02-22T17:38:24.727325" elapsed="0.094629"/>
 </kw>
 <arg>${company}</arg>
 <arg>${address}</arg>
@@ -652,7 +654,7 @@ Ratione dolor nam cum ea. Harum porro qui optio.' into text field 'other'.</msg>
 <arg>${mobile_phone}</arg>
 <arg>${additional_information}</arg>
 <arg>${please_assign_an_addrress_title_for_future_reference}</arg>
-<status status="PASS" start="2024-02-22T17:33:00.390577" elapsed="4.301563"/>
+<status status="PASS" start="2024-02-22T17:38:22.282206" elapsed="2.540761"/>
 </kw>
 <arg>${Company}</arg>
 <arg>${Address}</arg>
@@ -665,69 +667,69 @@ Ratione dolor nam cum ea. Harum porro qui optio.' into text field 'other'.</msg>
 <arg>${Mobile_phone}</arg>
 <arg>${Additional_information}</arg>
 <arg>${Please_assign_an_addrress_title_for_future_reference}</arg>
-<status status="PASS" start="2024-02-22T17:33:00.389497" elapsed="4.303646"/>
+<status status="PASS" start="2024-02-22T17:38:22.277970" elapsed="2.544997"/>
 </kw>
 <kw name="E salvo a minhha compra" owner="HomeStep">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:33:04.696608" level="INFO">Clicking element 'submitAddress'.</msg>
+<msg time="2024-02-22T17:38:24.824016" level="INFO">Clicking element 'submitAddress'.</msg>
 <arg>${SAVE}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-22T17:33:04.695581" elapsed="1.590991"/>
+<status status="PASS" start="2024-02-22T17:38:24.824016" elapsed="1.501961"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:33:06.288560" level="INFO">Clicking element '//*[@id="center_column"]/form/p/button/span'.</msg>
+<msg time="2024-02-22T17:38:26.327950" level="INFO">Clicking element '//*[@id="center_column"]/form/p/button/span'.</msg>
 <arg>${PROCEED_TO_CHECKOUT_ADDRESS}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-22T17:33:06.287558" elapsed="1.076641"/>
+<status status="PASS" start="2024-02-22T17:38:26.326949" elapsed="0.922638"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:33:07.365196" level="INFO">Clicking element '//*[@id="uniform-cgv"]/span'.</msg>
+<msg time="2024-02-22T17:38:27.250705" level="INFO">Clicking element '//*[@id="uniform-cgv"]/span'.</msg>
 <arg>${I_AGREE_TO_THE_TERMS_OF_SERVICE_AND_WILL_ADHERE_TO_THEM_UNCONDITIONALLY}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-22T17:33:07.364199" elapsed="0.072217"/>
+<status status="PASS" start="2024-02-22T17:38:27.249587" elapsed="0.068781"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:33:07.437440" level="INFO">Clicking element '//*[@id="form"]/p/button/span'.</msg>
+<msg time="2024-02-22T17:38:27.320407" level="INFO">Clicking element '//*[@id="form"]/p/button/span'.</msg>
 <arg>${PROCEED_TO_CHECKOUT_SHIPPING}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-22T17:33:07.436416" elapsed="0.878979"/>
+<status status="PASS" start="2024-02-22T17:38:27.319379" elapsed="0.869259"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:33:08.316380" level="INFO">Clicking element '//*[@id="HOOK_PAYMENT"]/div[1]/div/p/a'.</msg>
+<msg time="2024-02-22T17:38:28.192645" level="INFO">Clicking element '//*[@id="HOOK_PAYMENT"]/div[1]/div/p/a'.</msg>
 <arg>${PAY_BY_BANK_WIRE}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-22T17:33:08.315395" elapsed="0.723083"/>
+<status status="PASS" start="2024-02-22T17:38:28.189642" elapsed="0.634146"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-22T17:33:09.039521" level="INFO">Clicking element '//*[@id="cart_navigation"]/button/span'.</msg>
+<msg time="2024-02-22T17:38:28.824796" level="INFO">Clicking element '//*[@id="cart_navigation"]/button/span'.</msg>
 <arg>${I_CONFIRM_MY_ORDER}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-22T17:33:09.038478" elapsed="1.532881"/>
+<status status="PASS" start="2024-02-22T17:38:28.823788" elapsed="1.199302"/>
 </kw>
-<status status="PASS" start="2024-02-22T17:33:04.693143" elapsed="5.878216"/>
+<status status="PASS" start="2024-02-22T17:38:24.822967" elapsed="5.201062"/>
 </kw>
 <kw name="E verifico se a mensagem de compra com sucesso" owner="HomeStep">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${YOUR_ORDER_ON_MY_SHOP_IS_COMPLETE}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-02-22T17:33:10.572345" elapsed="0.027599"/>
+<status status="PASS" start="2024-02-22T17:38:30.026124" elapsed="0.032560"/>
 </kw>
-<status status="PASS" start="2024-02-22T17:33:10.572345" elapsed="0.029601"/>
+<status status="PASS" start="2024-02-22T17:38:30.025079" elapsed="0.033605"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-02-22T17:33:10.603130" elapsed="6.238504"/>
+<status status="PASS" start="2024-02-22T17:38:30.059332" elapsed="6.219150"/>
 </kw>
 <doc>Realizar a compra de um produto por uma das abas do site (Women, Dresses, T-Shirts)</doc>
 <tag>CT01</tag>
-<status status="PASS" start="2024-02-22T17:32:38.153140" elapsed="38.689494"/>
+<status status="PASS" start="2024-02-22T17:38:03.282968" elapsed="32.997503"/>
 </test>
-<status status="PASS" start="2024-02-22T17:32:37.557087" elapsed="39.288554"/>
+<status status="PASS" start="2024-02-22T17:38:02.739596" elapsed="33.544875"/>
 </suite>
-<status status="PASS" start="2024-02-22T17:32:37.553695" elapsed="39.294993"/>
+<status status="PASS" start="2024-02-22T17:38:02.735111" elapsed="33.551806"/>
 </suite>
-<status status="PASS" start="2024-02-22T17:32:37.526457" elapsed="39.324183"/>
+<status status="PASS" start="2024-02-22T17:38:02.706128" elapsed="33.582791"/>
 </suite>
 <statistics>
 <total>
