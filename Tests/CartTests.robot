@@ -26,7 +26,7 @@ CT01:Realizar a compra de um produto por uma das abas do site (Women, Dresses, T
     ${Address_line_2}                                                 Generate Random Adddress 
     ${City}                                                           Generate Random City  
     ${State}                                                          Get Us States
-    ${Zip_postal_code}                                                Generate Random Zip
+    ${Zip_postal_code}                                                Generate Postal Code
     ${Country}                                                        Generate Random Country 
     ${Home_phone}                                                     Generate Random Phone Number
     ${Mobile_phone}                                                   Generate Random Phone Number
@@ -39,4 +39,6 @@ CT01:Realizar a compra de um produto por uma das abas do site (Women, Dresses, T
     E clico em Women no menu
     E compro a primeira roupa
     E preencho o meu endereço e outros dados para compra    ${Company}    ${Address}    ${Address_line_2}    ${City}     ${State}    ${Zip_postal_code}    ${Country}    ${Home_phone}    ${Mobile_phone}    ${Additional_information}    ${Please_assign_an_addrress_title_for_future_reference}
+    E salvo a minhha compra
+    E verifico se a mensagem de compra com sucesso
 

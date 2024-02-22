@@ -36,9 +36,9 @@ Preencher os dados para compra
     Input Text                          ${ADDRESS_FIELD}                                                        ${address}
     Input Text                          ${ADDRESS_LINE_2_FIELD}                                                 ${address_line_2}
     Input Text                          ${CITY_FIELD}                                                           ${city}
-    Select From List by Value           ${STATE_FIELD}                                                          ${state}
+    Select From List by Value           ${STATE_FIELD}                                                          2
     Input Text                          ${ZIP_POSTAL_CODE_FIELD}                                                ${zip_postal_code}
-    Input Text                          ${COUNTRY_FIELD}                                                        ${country}
+    #Input Text                          ${COUNTRY_FIELD}                                                        ${country}
     Input Text                          ${HOME_PHONE_FIELD}                                                     ${home_phone}
     Input Text                          ${MOBILE_PHONE_FIELD}                                                   ${mobile_phone}
     Input Text                          ${ADDITIONAL_INFORMATION_FIELD}                                         ${additional_information}

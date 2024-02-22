@@ -50,3 +50,15 @@ E compro a primeira roupa
 E preencho o meu endereço e outros dados para compra
     [Arguments]    ${company}    ${address}    ${address_line_2}    ${city}     ${state}    ${zip_postal_code}    ${country}    ${home_phone}    ${mobile_phone}    ${additional_information}    ${please_assign_an_addrress_title_for_future_reference}
     Preencher os dados para compra   ${company}    ${address}    ${address_line_2}    ${city}     ${state}    ${zip_postal_code}    ${country}    ${home_phone}    ${mobile_phone}    ${additional_information}    ${please_assign_an_addrress_title_for_future_reference}
+
+E salvo a minhha compra
+    Click Element               ${SAVE} 
+    Click Element               ${PROCEED_TO_CHECKOUT_ADDRESS}   
+    Click Element               ${I_AGREE_TO_THE_TERMS_OF_SERVICE_AND_WILL_ADHERE_TO_THEM_UNCONDITIONALLY} 
+    Click Element               ${PROCEED_TO_CHECKOUT_SHIPPING} 
+    Click Element               ${PAY_BY_BANK_WIRE} 
+    Click Element               ${I_CONFIRM_MY_ORDER}
+
+E verifico se a mensagem de compra com sucesso
+    Wait Until Page Contains    ${YOUR_ORDER_ON_MY_SHOP_IS_COMPLETE}    timeout=10s
+    

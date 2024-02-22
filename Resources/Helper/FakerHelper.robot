@@ -72,10 +72,10 @@ Generate Random Adddress
     ${adddress}=    FakerLibrary.Address
     RETURN   ${adddress}
 
-Generate Random Zip
+Generate Random Postcode
     [Documentation]    Gera um CEP aleatório
-    ${zip}=    FakerLibrary.Zip
-    RETURN   ${zip}
+    ${postal_code}=    FakerLibrary.Postcode
+    RETURN   ${postal_code}
 
 Generate Random Text
     [Documentation]    Gera um texto aleatório

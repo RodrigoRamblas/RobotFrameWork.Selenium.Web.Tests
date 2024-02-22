@@ -14,3 +14,7 @@ def get_us_states():
         "Wyoming"
     ]
     return random.choice(states)
+
+def generate_postal_code():
+    postal_code = ''.join(random.choices('0123456789', k=5))
+    return postal_code
