@@ -9,6 +9,10 @@ Resource   ../Data/Data.robot
 
 
 #---QUANDO--
+Quando vejo na barra de navegação com as opções ${contact_us} e ${sing_in}
+    Element Text Should Be          ${CONTACT_US_BUTTON}          ${contact_us}
+    Element Text Should Be          ${SING_IN_BUTTON}             ${sing_in}
+
 Quando clico no botão Sign in
     Click Element                       ${SING_IN_BUTTON}  
 
